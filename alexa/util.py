@@ -29,13 +29,13 @@ def can_throw_card(handler_input):
 
 def get_token(handler_input):
     """Extracting token received in the request."""
-    # type: (HandlerInput) -> str
+   
     return handler_input.request_envelope.request.token
 
 
 def get_index(handler_input):
     """Extracting index from the token received in the request."""
-    # type: (HandlerInput) -> int
+   
     token = int(get_token(handler_input))
     persistent_attr = handler_input.attributes_manager.persistent_attributes
 
@@ -44,7 +44,7 @@ def get_index(handler_input):
 
 def get_offset_in_ms(handler_input):
     """Extracting offset in milliseconds received in the request"""
-    # type: (HandlerInput) -> int
+   
     return handler_input.request_envelope.request.offset_in_milliseconds
 
 

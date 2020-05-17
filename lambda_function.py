@@ -63,8 +63,8 @@ class LaunchRequestHandler(AbstractRequestHandler):
             playback_info['in_playback_session'] = False
             message = data.WELCOME_PLAYBACK_MSG.format(
                 data.AUDIO_DATA[
-                    playback_info.get("play_order")[
-                        playback_info.get("index")]].get("title"))
+                    playback_info.get("play_order")
+                    [playback_info.get("index")]].get("title"))
             reprompt = data.WELCOME_PLAYBACK_REPROMPT_MSG
 
         return handler_input.response_builder.speak(message).ask(
